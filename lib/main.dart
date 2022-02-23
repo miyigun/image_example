@@ -19,6 +19,61 @@ void main() {
           Icons.extension,
         ),
       ),
+      body: Column(
+        children: [
+          Text(
+            "Image Türleri",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          IntrinsicHeight(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.blue[100],
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("Kaktüs"),
+                        Image.asset("images/kaktus.webp")
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.pink[200],
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("Network"),
+                        Image.network("https://images.pexels.com/photos/7026056/pexels-photo-7026056.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.pink[200],
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("Profil"),
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.purple[300],
+                          backgroundImage: NetworkImage("https://images.pexels.com/photos/7026056/pexels-photo-7026056.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     ),
   ));
 }
