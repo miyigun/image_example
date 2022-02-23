@@ -25,6 +25,7 @@ void main() {
             "Image Türleri",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
+          //Resimleri aynı yükseklikte gösterir
           IntrinsicHeight(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
